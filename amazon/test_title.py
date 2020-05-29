@@ -2,14 +2,14 @@ import pytest
 from selenium import webdriver
 
 expected_title = 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more'
-base_url = 'https://www.amazon.com'
+home_page_url = 'https://www.amazon.com'
 search_title = 'Amazon.com: nike air max'
 
 
 @pytest.fixture()
 def env_setup():
     global driver
-    global baseUrl
+    global home_page_url
     # we will use Google Chrome in this test. Specify the location of your chromedriver.exe
     driver = webdriver.Chrome("../chromedriver_mac_83")
     # wait 10 seconds till the website will open
@@ -23,6 +23,6 @@ def env_setup():
 
 def test_title(env_setup):
     # navigate to Amazon.com home page
-    driver.get(base_url)
+    driver.get(home_page_url)
     # verify that website title is Amazon.com
     assert driver.title == expected_title
