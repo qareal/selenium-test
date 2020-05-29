@@ -23,4 +23,6 @@ To install necessary package using **PyCharm** (on **Windows 10**):
 
 You can run your test via terminal. Type **pytest -v filename** or **pytest -v** to run all tests in the folder.
 
+Chromedriver is configured for Mac OS
+
 
